@@ -29,16 +29,16 @@ public class Interfaz1 extends javax.swing.JFrame {
         btgOpciones = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         comboxParticipante = new javax.swing.JComboBox<>();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        cboxAlmuerzo = new javax.swing.JCheckBox();
+        cboxTransporte = new javax.swing.JCheckBox();
+        cboxMaterial = new javax.swing.JCheckBox();
+        rbtmMañana = new javax.swing.JRadioButton();
+        rbtmTarde = new javax.swing.JRadioButton();
+        btmRegistrar = new javax.swing.JButton();
+        btmMostrar = new javax.swing.JButton();
         txtNombre = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtaLista = new javax.swing.JTextArea();
         lblRegistrarNombre = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,30 +52,35 @@ public class Interfaz1 extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setText("Almuerzo");
+        cboxAlmuerzo.setText("Almuerzo");
 
-        jCheckBox2.setText("Transporte");
+        cboxTransporte.setText("Transporte");
 
-        jCheckBox3.setText("Material de Apoyo");
+        cboxMaterial.setText("Material de Apoyo");
 
-        btgOpciones.add(jRadioButton1);
-        jRadioButton1.setText("Mañana");
+        btgOpciones.add(rbtmMañana);
+        rbtmMañana.setText("Mañana");
 
-        btgOpciones.add(jRadioButton2);
-        jRadioButton2.setText("Tarde");
+        btgOpciones.add(rbtmTarde);
+        rbtmTarde.setText("Tarde");
 
-        jButton1.setText("Registrar Participantes");
-
-        jButton2.setText("Mostrar Registros");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btmRegistrar.setText("Registrar Participantes");
+        btmRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btmRegistrarActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        btmMostrar.setText("Mostrar Registros");
+        btmMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmMostrarActionPerformed(evt);
+            }
+        });
+
+        txtaLista.setColumns(20);
+        txtaLista.setRows(5);
+        jScrollPane1.setViewportView(txtaLista);
 
         lblRegistrarNombre.setText("Ingrese su Nombre: ");
 
@@ -97,23 +102,23 @@ public class Interfaz1 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(174, 174, 174)
-                        .addComponent(jRadioButton1)
+                        .addComponent(rbtmMañana)
                         .addGap(79, 79, 79)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox3)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jButton2)))
+                            .addComponent(cboxMaterial)
+                            .addComponent(rbtmTarde)
+                            .addComponent(btmMostrar)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(btmRegistrar)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox1)
+                                .addComponent(cboxAlmuerzo)
                                 .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
-                                        .addComponent(jCheckBox2))
+                                        .addComponent(cboxTransporte))
                                     .addComponent(comboxParticipante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(166, 166, 166)
@@ -133,17 +138,17 @@ public class Interfaz1 extends javax.swing.JFrame {
                 .addComponent(comboxParticipante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3))
+                    .addComponent(cboxAlmuerzo)
+                    .addComponent(cboxTransporte)
+                    .addComponent(cboxMaterial))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(rbtmMañana)
+                    .addComponent(rbtmTarde))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btmRegistrar)
+                    .addComponent(btmMostrar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(82, Short.MAX_VALUE))
@@ -156,26 +161,30 @@ public class Interfaz1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_comboxParticipanteActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btmMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmMostrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btmMostrarActionPerformed
+
+    private void btmRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmRegistrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btmRegistrarActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgOpciones;
+    private javax.swing.JButton btmMostrar;
+    private javax.swing.JButton btmRegistrar;
+    private javax.swing.JCheckBox cboxAlmuerzo;
+    private javax.swing.JCheckBox cboxMaterial;
+    private javax.swing.JCheckBox cboxTransporte;
     private javax.swing.JComboBox<String> comboxParticipante;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblRegistrarNombre;
+    private javax.swing.JRadioButton rbtmMañana;
+    private javax.swing.JRadioButton rbtmTarde;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextArea txtaLista;
     // End of variables declaration//GEN-END:variables
 }
